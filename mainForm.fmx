@@ -1,0 +1,311 @@
+object frmPaste: TfrmPaste
+  Left = 0
+  Top = 0
+  BorderIcons = [biSystemMenu, biMinimize, biMaximize, biHelp]
+  BorderStyle = bsSizeToolWin
+  Caption = 'pastebin.org'
+  ClientHeight = 601
+  ClientWidth = 559
+  StyleBook = StyleBook2
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [dkDesktop, dkiPhone, dkiPad]
+  ShowFullScreenIcon = True
+  OnActivate = FormActivate
+  OnCreate = FormCreate
+  OnCloseQuery = FormCloseQuery
+  OnDestroy = FormDestroy
+  OnKeyDown = FormKeyDown
+  DesignerMobile = False
+  DesignerWidth = 0
+  DesignerHeight = 0
+  DesignerDeviceName = ''
+  DesignerOrientation = 0
+  object TabControl1: TTabControl
+    Align = alClient
+    Height = 579.000000000000000000
+    TabIndex = 0
+    TabOrder = 0
+    Width = 559.000000000000000000
+    object TabItem1: TTabItem
+      WordWrap = False
+      Height = 23.000000000000000000
+      IsSelected = True
+      Position.X = 1.000000000000000000
+      TabOrder = 0
+      Text = #1054#1090#1087#1088#1072#1074#1080#1090#1100
+      Width = 73.000000000000000000
+      object pOptionMain: TPanel
+        Align = alMostTop
+        Height = 105.000000000000000000
+        Width = 559.000000000000000000
+        TabOrder = 0
+        object lName: TLabel
+          Height = 17.000000000000000000
+          Position.X = 8.000000000000000000
+          Position.Y = 8.000000000000000000
+          Text = #1053#1072#1079#1074#1072#1085#1080#1077
+          Width = 57.000000000000000000
+        end
+        object eTitle: TEdit
+          TabOrder = 0
+          Position.X = 64.000000000000000000
+          Position.Y = 8.000000000000000000
+          Width = 481.000000000000000000
+          Height = 22.000000000000000000
+          KillFocusByReturn = False
+        end
+        object cbFormat: TComboBox
+          DisableFocusEffect = False
+          Height = 22.000000000000000000
+          ItemIndex = 0
+          Position.X = 64.000000000000000000
+          Position.Y = 40.000000000000000000
+          StyleLookup = 'cbFormatStyle1'
+          TabOrder = 2
+          Width = 481.000000000000000000
+          object TListBoxItem
+            Height = 19.000000000000000000
+            IsSelected = True
+            Text = 'None'
+            Width = 19.000000000000000000
+          end
+        end
+        object lFormat: TLabel
+          Height = 17.000000000000000000
+          Position.X = 8.000000000000000000
+          Position.Y = 40.000000000000000000
+          Text = #1060#1086#1088#1084#1072#1090
+          Width = 57.000000000000000000
+        end
+        object lExpiration: TLabel
+          Height = 17.000000000000000000
+          Position.X = 8.000000000000000000
+          Position.Y = 72.000000000000000000
+          Text = #1059#1076#1072#1083#1080#1090#1100
+          Width = 57.000000000000000000
+        end
+        object lVisibility: TLabel
+          Height = 17.000000000000000000
+          Position.X = 216.000000000000000000
+          Position.Y = 72.000000000000000000
+          Text = #1044#1086#1089#1090#1091#1087
+          Width = 57.000000000000000000
+        end
+        object cbVisibility: TComboBox
+          DisableFocusEffect = False
+          Height = 22.000000000000000000
+          ItemIndex = 0
+          Position.X = 264.000000000000000000
+          Position.Y = 72.000000000000000000
+          TabOrder = 4
+          Width = 121.000000000000000000
+          object TListBoxItem
+            Height = 19.000000000000000000
+            IsSelected = True
+            Text = 'Public'
+            Width = 19.000000000000000000
+          end
+          object TListBoxItem
+            Height = 19.000000000000000000
+            Text = 'Unlisted'
+            Width = 19.000000000000000000
+          end
+          object TListBoxItem
+            Height = 19.000000000000000000
+            Text = 'Private'
+            Width = 19.000000000000000000
+          end
+        end
+        object btnPaste: TButton
+          Height = 22.000000000000000000
+          Position.X = 464.000000000000000000
+          Position.Y = 72.000000000000000000
+          TabOrder = 5
+          Text = 'Paste it!'
+          Width = 80.000000000000000000
+          OnClick = btnPasteClick
+        end
+        object cbKeep: TComboBox
+          DisableFocusEffect = False
+          Height = 22.000000000000000000
+          ItemIndex = 0
+          Position.X = 64.000000000000000000
+          Position.Y = 72.000000000000000000
+          TabOrder = 3
+          Width = 121.000000000000000000
+          object TListBoxItem
+            Height = 19.000000000000000000
+            IsSelected = True
+            Text = 'Never'
+            Width = 19.000000000000000000
+          end
+        end
+      end
+      object mPaste: TMemo
+        Align = alClient
+        Height = 451.000000000000000000
+        TabOrder = 1
+        Width = 559.000000000000000000
+        Lines.Strings = (
+          '/**'
+          ' * The HelloWorldApp class implements an application that'
+          ' * simply prints "Hello World!" to standard output.'
+          ' */'
+          'class HelloWorldApp {'
+          '    public static void main(String[] args) {'
+          
+            '        System.out.println("Hello World!"); // Display the strin' +
+            'g.'
+          '    }'
+          '}')
+      end
+    end
+    object TabItem2: TTabItem
+      WordWrap = False
+      Height = 23.000000000000000000
+      IsSelected = False
+      Position.X = 74.000000000000000000
+      TabOrder = 1
+      Text = #1053#1072#1089#1090#1088#1086#1081#1082#1080
+      Width = 74.000000000000000000
+      object cbCloseType: TCheckBox
+        Height = 19.000000000000000000
+        Position.X = 88.000000000000000000
+        Position.Y = 48.000000000000000000
+        TabOrder = 0
+        Text = #1042' '#1090#1088#1077#1081' '#1074#1084#1077#1089#1090#1086' '#1079#1072#1082#1088#1099#1090#1080#1103
+        Width = 153.000000000000000000
+      end
+      object eDevkey: TEdit
+        Anchors = [akLeft, akTop, akRight]
+        TabOrder = 1
+        Position.X = 90.000000000000000000
+        Position.Y = 16.000000000000000000
+        Width = 460.000000000000000000
+        Height = 22.000000000000000000
+        KillFocusByReturn = False
+      end
+      object cbDebug: TCheckBox
+        Height = 19.000000000000000000
+        Position.X = 88.000000000000000000
+        Position.Y = 72.000000000000000000
+        TabOrder = 2
+        Text = #1055#1086#1082#1072#1079#1072#1090#1100' '#1076#1077#1073#1072#1075
+        Width = 153.000000000000000000
+        OnChange = cbDebugChange
+      end
+      object lHotkeys: TLabel
+        Anchors = [akLeft, akTop, akRight]
+        Height = 17.000000000000000000
+        HitTest = True
+        Position.X = 90.000000000000000000
+        Position.Y = 96.000000000000000000
+        StyleLookup = 'lHotkeysStyle1'
+        Text = 'Hotkey window'
+        Width = 460.000000000000000000
+        OnClick = lHotkeysClick
+      end
+      object Panel1: TPanel
+        Align = alLeft
+        Height = 556.000000000000000000
+        StyleLookup = 'Panel1Style1'
+        Width = 89.000000000000000000
+        TabOrder = 4
+        object Label1: TLabel
+          Height = 17.000000000000000000
+          Position.X = 8.000000000000000000
+          Position.Y = 16.000000000000000000
+          Text = #1050#1083#1102#1095' '#1082#1083#1080#1077#1085#1090#1072
+          Width = 81.000000000000000000
+        end
+        object Label2: TLabel
+          Height = 17.000000000000000000
+          Position.X = 8.000000000000000000
+          Position.Y = 96.000000000000000000
+          Text = #1050#1083#1072#1074#1080#1096#1072
+          Width = 57.000000000000000000
+        end
+      end
+    end
+    object TabItem3: TTabItem
+      WordWrap = False
+      Height = 23.000000000000000000
+      IsSelected = False
+      Position.X = 148.000000000000000000
+      TabOrder = 2
+      Text = #1044#1077#1073#1072#1075
+      Width = 50.000000000000000000
+      object mLog: TMemo
+        Align = alClient
+        Height = 556.000000000000000000
+        TabOrder = 0
+        Width = 559.000000000000000000
+      end
+    end
+  end
+  object StatusBar1: TStatusBar
+    Height = 22.000000000000000000
+    Position.Y = 579.000000000000000000
+    ShowSizeGrip = True
+    Width = 559.000000000000000000
+    object lStatus: TText
+      Align = alClient
+      Color = claBlue
+      Font.Size = 14.000000000000000000
+      Height = 22.000000000000000000
+      HorzTextAlign = taLeading
+      Text = 'Status'
+      Width = 559.000000000000000000
+    end
+  end
+  object StyleBook2: TStyleBook
+    Left = 464
+    Top = 264
+    ResourcesBin = {
+      464D585F5354594C4520322E3501060C50616E656C315374796C653103CD0006
+      0E6C486F746B6579735374796C653103570100545046300A5452656374616E67
+      6C6500095374796C654E616D65060C50616E656C315374796C653107436F726E
+      6572730B000D44657369676E56697369626C65080946696C6C2E4B696E640706
+      626B4E6F6E650648656967687405000000000000008408400748697454657374
+      080A506F736974696F6E2E5805000000000000008608400A506F736974696F6E
+      2E590500000000000000B606400553696465730B000C5374726F6B652E436F6C
+      6F7207097846463937393739370557696474680500000000000000B205400000
+      5450463007544C61796F757400095374796C654E616D65060E6C486F746B6579
+      735374796C65310648656967687405000000000000008803400A506F73697469
+      6F6E2E580500000000000000DC07400A506F736974696F6E2E59050000000000
+      0080B0074005576964746805000000000000808C0740000A5452656374616E67
+      6C6500095374796C654E616D65060A52656374616E676C653105416C69676E07
+      08616C436C69656E740946696C6C2E4B696E640706626B4E6F6E650648656967
+      6874050000000000000088034007486974546573740805576964746805000000
+      000000808C07400005545465787400095374796C654E616D6506047465787405
+      416C69676E0708616C436C69656E7405436F6C6F720708636C61426C61636B06
+      4C6F636B65640906486569676874050000000000000088034007486974546573
+      740805576964746805000000000000808C074000000000}
+  end
+  object IdLogDebug1: TIdLogDebug
+    OnReceive = IdLogDebug1Send
+    OnSend = IdLogDebug1Send
+    Left = 464
+    Top = 168
+  end
+  object Client: TIdHTTP
+    Intercept = IdLogDebug1
+    AllowCookies = True
+    ProxyParams.BasicAuthentication = False
+    ProxyParams.ProxyPort = 0
+    Request.ContentLength = -1
+    Request.ContentRangeEnd = -1
+    Request.ContentRangeStart = -1
+    Request.ContentRangeInstanceLength = -1
+    Request.Accept = 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    Request.BasicAuthentication = False
+    Request.UserAgent = 'Mozilla/3.0 (compatible; Indy Library)'
+    Request.Ranges.Units = 'bytes'
+    Request.Ranges = <>
+    HTTPOptions = [hoForceEncodeParams]
+    OnHeadersAvailable = ClientHeadersAvailable
+    Left = 464
+    Top = 208
+  end
+end

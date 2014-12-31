@@ -1,0 +1,23 @@
+object TStyleContainer
+  object TLayout
+    StyleName = 'lHotkeysStyle1'
+    Height = 17.000000000000000000
+    Position.X = 440.000000000000000000
+    Position.Y = 353.000000000000000000
+    Width = 281.000000000000000000
+    object TText
+      StyleName = 'text'
+      Align = alClient
+      Color = claBlack
+      Locked = True
+      Height = 17.000000000000000000
+      HitTest = False
+      Width = 281.000000000000000000
+    end
+    object TRectangle
+      StyleName = 'Rectangle1'
+      Height = 17.000000000000000000
+      Width = 281.000000000000000000
+    end
+  end
+end
